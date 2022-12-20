@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+
+html {
+    background: url("images/pattern-background-mobile.svg") no-repeat;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: min(375px, 100%);
+    margin: auto;
+}
+
+.text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
