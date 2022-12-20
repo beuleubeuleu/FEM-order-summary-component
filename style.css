@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,18 +8,50 @@
 img {
     max-width: 100%;
 }
+:root{
+    --primary-pale: hsl(225, 100%, 94%);
+    --primary-bright: hsl(245, 75%, 52%);
+
+    --neutral-pale: hsl(225, 100%, 98%);
+    --neutral-desaturated: hsl(224, 23%, 55%);
+    --neutral-dark: hsl(223, 47%, 23%);
+}
 
 html {
-    background: url("images/pattern-background-mobile.svg") no-repeat;
+    background: var(--neutral-pale) url("images/pattern-background-mobile.svg") no-repeat;
+    background-position: top;
+    font-family: "Red Hat Display", sans-serif;
 }
 
 .flex {
     display: flex;
 }
 
-.container {
-    width: min(375px, 100%);
+body {
+    padding: 5rem 0;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+.order-summary {
+    width: min(375px, 90%);
+    height: 70vh;
     margin: auto;
+    padding-bottom: 1rem;
+    border-radius: 25px;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: rgb(255, 255, 255);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.hero {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
 
 .text {
@@ -25,6 +59,70 @@ html {
     align-items: center;
     text-align: center;
 }
+.text .titre {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--neutral-dark) !important;
+    margin: 1rem;
+}
+.text p {
+    color: var(--neutral-desaturated);
+    padding: 0 1rem;
+}
 
-.attribution { font-size: 11px; text-align: center; }
+.recap {
+    margin: 0 1rem ;
+    padding: 1rem;
+    background: #FAFAFA;
+    border-radius: 15px;
+
+    justify-content: space-between;
+    align-items: center;
+}
+.recap .text-container {
+    flex-direction: column;
+}
+.recap .titre {
+    font-size: 1rem;
+    color: var(--neutral-dark) !important;
+    font-weight: 900;
+}
+.recap p {
+    color: var(--neutral-desaturated);
+}
+.recap a {
+    color: var(--primary-bright);
+}
+
+.boutons {
+    flex-direction: column;
+    margin: 1rem;
+}
+.boutons button {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    border-radius: 15px;
+    border: none;
+    text-decoration: none;
+}
+.boutons .proceed {
+    background: var(--primary-bright);
+    color: #FFF;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+}
+.boutons .cancel {
+    color: var(--neutral-desaturated);
+    background: transparent;
+}
+
+.attribution { font-size: 11px; text-align: center; margin: 2rem }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 375px){
+    html {
+        background: var(--neutral-pale) url("images/pattern-background-desktop.svg") no-repeat;
+    }
+}
