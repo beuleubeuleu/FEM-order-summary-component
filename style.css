@@ -71,7 +71,7 @@ body {
 }
 
 .recap {
-    margin: 0 1rem ;
+    margin: 1rem ;
     padding: 1rem;
     background: #FAFAFA;
     border-radius: 15px;
@@ -81,6 +81,7 @@ body {
 }
 .recap .text-container {
     flex-direction: column;
+    margin: 0 1rem
 }
 .recap .titre {
     font-size: 1rem;
@@ -92,6 +93,7 @@ body {
 }
 .recap a {
     color: var(--primary-bright);
+    text-align: right;
 }
 
 .boutons {
